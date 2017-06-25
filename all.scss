@@ -1,0 +1,429 @@
+//colors
+$black_65: rgba(0, 0, 0, 0.65);
+$color_black_rock_approx: #140327;
+$color_black_russian_approx: #130325;
+$white: #fff;
+$color_haiti_approx: #221531;
+$color_fuscous_gray_approx: #555;
+$color_wild_sand_approx: #f5f5f5;
+$color_firefly_approx: #0c2539;
+$black: #000;
+$color_nevada_approx: #677278;
+$color_iron_approx: #d6d6d6;
+$color_astronaut_blue_approx: #0d4363;
+$color_scarpa_flow_approx: #5c5b61;
+
+//fonts
+$font_0: Open Sans;
+$font_1: sans-serif;
+$font_2: FontAwesome;
+$font_3: Montserrat;
+
+//urls
+$url_0: url(../img/slide-first.png);
+$url_1: url(../img/bg.png);
+$url_2: url(../img/slide-bottom.png);
+$url_3: url(../img/baner-bottom.png);
+
+body {
+  left: 0;
+  margin: 0;
+  position: relative;
+  background-color: $color_black_russian_approx;
+}
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+.main-baner {
+  background-image: $url_0;
+  padding: 45px 50px 85px;
+  background-size: cover;
+}
+.main-slogan {
+  display: block;
+  margin: 0 auto;
+  padding: 277px 0 216px;
+}
+.massage {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+.information {
+  color: $white;
+}
+.menu {
+  background-color: $color_haiti_approx;
+  left: -285px;
+  height: 100%;
+  position: fixed;
+  width: 285px;
+  ul {
+    border-top: 1px solid $color_fuscous_gray_approx;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    border-bottom: 1px solid $color_fuscous_gray_approx;
+    font-family: $font_0, $font_1;
+    line-height: 45px;
+    padding-bottom: 3px;
+    padding-left: 20px;
+    padding-top: 3px;
+    &:hover {
+      cursor: pointer;
+      background-color: $white;
+      a {
+        color: $color_haiti_approx;
+      }
+    }
+  }
+  a {
+    color: $white;
+    font-size: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}
+.background {
+  height: 100%;
+  width: 60px;
+  background-size: cover;
+  position: fixed;
+}
+.wrapper {
+  background-image: $url_1;
+  background-size: cover;
+  z-index: 1;
+}
+.icon-close {
+  cursor: pointer;
+  padding-left: 25px;
+  padding-top: 25px;
+  padding-bottom: 27px;
+  color: $white;
+  i {
+    font-size: 20px;
+  }
+}
+.icon-menu {
+  color: $white;
+  cursor: pointer;
+  font-family: $font_0, $font_1;
+  font-size: 20px;
+  padding-bottom: 25px;
+  padding-left: 25px;
+  padding-top: 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 40px;
+  height: 100%;
+  z-index: 9999999;
+  p {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(270deg);
+    font-size: 15px;
+    position: absolute;
+    margin: 0;
+    left: 9px;
+    bottom: 25%;
+  }
+  img {
+    margin-right: 5px;
+  }
+}
+.some-pictures {
+  ul {
+    display: flex;
+    justify-content: space-between;
+    li {
+      background-color: $white;
+      width: 30%;
+      position: relative;
+      a {
+        display: block;
+        position: relative;
+        img {
+          width: 100%;
+        }
+        span {
+          position: absolute;
+          bottom: 10px;
+          right: 10px;
+          color: $white;
+          &:before {
+            content: '\f004';
+            font-family: $font_2;
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            right: 30px;
+          }
+        }
+        &.some-pictures_for-cursor:before {
+          content: "";
+          width: 39px;
+          height: 39px;
+          position: absolute;
+          left: 0;
+          top: 152px;
+          border-top: 39px solid transparent;
+          border-left: 39px solid $color_black_rock_approx;
+          border-bottom: 39px solid transparent;
+        }
+      }
+    }
+  }
+  h2 {
+    color: $white;
+    padding: 47px 0;
+    color: $color_wild_sand_approx;
+    font-family: $font_3;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 40px;
+    text-transform: uppercase;
+  }
+  h3 {
+    color: $white;
+  }
+  section {
+    h3 {
+      font-size: 25px;
+      color: $color_firefly_approx;
+      text-transform: uppercase;
+      font-weight: 400;
+      line-height: 40px;
+      padding: 40px 40px 0;
+    }
+    p {
+      color: $color_nevada_approx;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 24px;
+      padding: 0 0 55px 0;
+      padding: 40px 40px 56px;
+    }
+  }
+}
+.main-baner-bottom {
+  background-image: $url_2;
+  background-position: 100%;
+  background-repeat: no-repeat;
+  padding: 45px 50px 85px;
+  margin: 20px 0 0;
+}
+.content {
+  display: flex;
+  justify-content: space-between;
+  color: $color_iron_approx;
+  padding: 80px 0;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 25px;
+  .left-column {
+    width: 40%;
+    p:first-child {
+      margin: 0 0 40px 0;
+    }
+  }
+  .right-column {
+    width: 40%;
+  }
+  h2 {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 54px;
+  }
+}
+ul {
+  &.content li {
+    width: 23%;
+  }
+  &.about-us li {
+    width: 23%;
+    h2 {
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 54px;
+    }
+    p {
+      color: $color_iron_approx;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 25px;
+    }
+  }
+}
+.about-us {
+  display: flex;
+  justify-content: space-between;
+}
+.baner-bottom {
+  background-image: $url_3;
+  background-size: cover;
+  padding: 223px 300px 246px;
+  color: $white;
+  .container {
+    text-align: right;
+  }
+  > p {
+    color: $white;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    text-transform: uppercase;
+  }
+  h2 {
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 22px;
+    margin: 20px 0 35px;
+    + p {
+      color: $color_iron_approx;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 25px;
+    }
+  }
+}
+footer {
+  .container {
+    padding: 75px 0;
+    overflow: hidden;
+    > ul {
+      float: left;
+      &:first-child {
+        width: 30%;
+      }
+    }
+    ul li {
+      color: $white;
+      font-weight: 400;
+      line-height: 24px;
+      padding: 0 20px;
+      &:first-child {
+        color: $color_astronaut_blue_approx;
+        line-height: 12px;
+        padding: 0 20px 30px;
+      }
+    }
+  }
+  p {
+    opacity: 0.4;
+    color: $color_scarpa_flow_approx;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 22px;
+    clear: both;
+    padding: 70px 20px 0;
+  }
+}
+@media only screen and(max-device-width: 1600px) {
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .some-pictures {
+    ul {
+      display: block;
+      li {
+        width: 49%;
+        margin: 30px auto;
+        a.some-pictures_for-cursor:before {
+          display: none;
+        }
+      }
+    }
+    h2 {
+      text-align: center;
+    }
+  }
+  .menu {
+    width: 160px;
+  }
+  .icon-menu {
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 0 139px $black_65;
+    background-color: $color_black_rock_approx;
+    width: 132px;
+    height: 132px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .information {
+    text-align: center;
+  }
+  footer {
+    p {
+      text-align: center;
+    }
+    .container > ul {
+      float: none;
+      width: 50%;
+      margin: 0 auto;
+      text-align: center;
+      &:first-child {
+        width: 50%;
+      }
+    }
+  }
+  ul.content li {
+    width: 34%;
+    margin: 0 20px;
+  }
+}
+@media only screen and(max-device-width: 1300px) {
+  ul.content li {
+    width: 60%;
+    margin: 30px auto;
+  }
+  .some-pictures ul li {
+    width: 60%;
+  }
+}
+@media only screen and(max-device-width: 700px) {
+  .main-slogan {
+    margin: 0;
+    padding: 90px 0 80px;
+  }
+  .information {
+    text-align: left;
+  }
+  .main-baner {
+    padding: 45px 80px 85px 168px;
+  }
+  .main-baner-bottom {
+    padding: 45px 20px 85px 180px;
+  }
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    .left-column {
+      width: 60%;
+      margin: 30px auto;
+    }
+    .right-column {
+      width: 60%;
+      margin: 30px auto;
+    }
+  }
+}
+.coments a {
+  padding: 20px 40px;
+  border-top: 1px solid $color_wild_sand_approx;
+  color: $color_firefly_approx;
+  font-weight: 400;
+  line-height: 40px;
+  &:before {
+    content: '\f075';
+    font-family: $font_2;
+    margin-right: 5px;
+    color: $black;
+  }
+}
